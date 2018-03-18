@@ -1,18 +1,17 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
-import { Inject } from "@angular/core";
-import { ElementRef } from "@angular/core";
-import { DOCUMENT } from "@angular/common";
-import { RavxxApiService } from "../services/ravxx-api.service";
+import {Component, OnInit, AfterViewInit} from '@angular/core';
+import {Inject} from "@angular/core";
+import {ElementRef} from "@angular/core";
+import {DOCUMENT} from "@angular/common";
+import {RavxxApiService} from "../services/ravxx-api.service";
 
 @Component({
-  selector: 'app-ravxx-api-root',
-  templateUrl: './ravxx-api-root.component.html',
-  styleUrls: ['./ravxx-api-root.component.scss']
+    selector: 'app-ravxx-api-root',
+    templateUrl: './ravxx-api-root.component.html',
+    styleUrls: ['./ravxx-api-root.component.scss']
 })
 export class RavxxApiRootComponent implements OnInit, AfterViewInit {
 
-    constructor(private elementRef:ElementRef, private ravxxApiService:RavxxApiService )
-    {
+    constructor(private elementRef: ElementRef, private ravxxApiService: RavxxApiService) {
 
     };
 
@@ -24,13 +23,12 @@ export class RavxxApiRootComponent implements OnInit, AfterViewInit {
         this.elementRef.nativeElement.appendChild(s);
     }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }
 
 window["__ravxxApiService__"] = null;
-window["ravxx_api_loaded"] = function()
-{
+window["ravxx_api_loaded"] = function () {
     window["__ravxxApiService__"].handleAPILoaded();
 }

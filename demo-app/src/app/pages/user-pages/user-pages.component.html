@@ -1,7 +1,7 @@
 <div class="userEntities" *ngIf="ravxxApiService.userPages | async as value; else loading">
-  <div *ngFor="let userPage of ravxxApiService.userPages | async">
-      <app-user-entity [pageTemplate]="userPage"></app-user-entity>
-  </div>
+    <div *ngFor="let userPage of ravxxApiService.userPages | async">
+        <app-user-entity [pageTemplate]="userPage"></app-user-entity>
+    </div>
 </div>
 
 <ng-template #loading>

@@ -1,9 +1,14 @@
 <div class="entity">
-  <div class="menu">
-    <div class="preview">preview</div>
-    <div class="create_new" [routerLink]="['/pages/','templates',pageTemplate.id,'create']">chooose</div>
-  </div>
-  <div class="thumbnail"><img [src]="pageTemplate.thumbnail"></div>
-  <div class="name"><input #box value="{{pageTemplate.name}}" (keyup.enter)="box.value!=pageTemplate.name?updateName(box.value):null"
-                           (blur)="box.value!=pageTemplate.name?updateName(box.value):null"></div>
+    <div class="menu">
+        <div class="preview" [routerLink]="['/pages/','user_pages',pageTemplate.id,'preview']">preview</div>
+        <div class="create_new" [routerLink]="['/pages/','user_pages',pageTemplate.id,'edit']">edit</div>
+    </div>
+    <div class="thumbnail"><img [src]="pageTemplate.thumbnail"></div>
+    <div class="name"><input #box value="{{pageTemplate.name}}"
+                             (keyup.enter)="box.value!=pageTemplate.name?updateName(box.value):null"
+                             (blur)="box.value!=pageTemplate.name?updateName(box.value):null">
+        <div>
+            <div>Change name</div>
+        </div>
+    </div>
 </div>

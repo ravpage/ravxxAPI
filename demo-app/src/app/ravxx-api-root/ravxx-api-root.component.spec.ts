@@ -1,25 +1,25 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import {async, ComponentFixture, TestBed} from '@angular/core/testing';
 
-import { RavxxApiRootComponent } from './ravxx-api-root.component';
+import {RavxxApiRootComponent} from './ravxx-api-root.component';
 
 describe('RavxxApiRootComponent', () => {
-  let component: RavxxApiRootComponent;
-  let fixture: ComponentFixture<RavxxApiRootComponent>;
+    let component: RavxxApiRootComponent;
+    let fixture: ComponentFixture<RavxxApiRootComponent>;
 
-  beforeEach(async(() => {
-    TestBed.configureTestingModule({
-      declarations: [ RavxxApiRootComponent ]
-    })
-    .compileComponents();
-  }));
+    beforeEach(async(() => {
+        TestBed.configureTestingModule({
+            declarations: [RavxxApiRootComponent]
+        })
+            .compileComponents();
+    }));
 
-  beforeEach(() => {
-    fixture = TestBed.createComponent(RavxxApiRootComponent);
-    component = fixture.componentInstance;
-    fixture.detectChanges();
-  });
+    beforeEach(() => {
+        fixture = TestBed.createComponent(RavxxApiRootComponent);
+        component = fixture.componentInstance;
+        fixture.detectChanges();
+    });
 
-  it('should create', () => {
-    expect(component).toBeTruthy();
-  });
+    it('should create', () => {
+        expect(component).toBeTruthy();
+    });
 });

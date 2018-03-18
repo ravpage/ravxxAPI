@@ -1,18 +1,18 @@
 <div class="title">
-  pages
+    pages
 </div>
 <div class="categories">
-  <div class="templates" [class.selected]="selection=='templates'" routerLink="/pages/templates">Templates</div>
-  <div class="pages" [class.selected]="selection=='user_pages'" routerLink="/pages/user_pages">User pages</div>
+    <div class="templates" [class.selected]="selection=='templates'" routerLink="/pages/templates">Templates</div>
+    <div class="pages" [class.selected]="selection=='user_pages'" routerLink="/pages/user_pages">User pages</div>
 </div>
 <ng-container *ngIf="selection=='templates'">
-  <app-system-pages></app-system-pages>
+    <app-system-pages></app-system-pages>
 </ng-container>
 <ng-container *ngIf="selection=='user_pages'">
-  <app-user-pages></app-user-pages>
-  <!--<app-system-pages></app-system-pages>-->
+    <app-user-pages></app-user-pages>
+    <!--<app-system-pages></app-system-pages>-->
 </ng-container>
 <div class="editorContainer">
-  <router-outlet></router-outlet>
+    <router-outlet></router-outlet>
 </div>
 

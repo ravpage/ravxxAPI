@@ -1,16 +1,17 @@
-import { Component, OnInit, Input } from '@angular/core';
+import {Component, OnInit, Input} from '@angular/core';
 
 @Component({
-  selector: 'app-system-entity',
-  templateUrl: './system-entity.component.html',
-  styleUrls: ['./system-entity.component.scss']
+    selector: 'app-system-entity',
+    templateUrl: './system-entity.component.html',
+    styleUrls: ['./system-entity.component.scss']
 })
 export class SystemEntityComponent implements OnInit {
-  @Input() pageTemplate: Object;
+    @Input() pageTemplate: Object;
 
-  constructor() { }
+    constructor() {
+    }
 
-  ngOnInit() {
-  }
+    ngOnInit() {
+    }
 
 }
