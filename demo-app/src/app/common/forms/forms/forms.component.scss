@@ -1,0 +1,47 @@
+:host {
+  padding: 10px;
+  display: block;
+}
+
+.title {
+  font-family: arial;
+  font-size: 24px;
+  font-weight: bold;
+  display: inline-block;
+  margin-right: 15px;
+}
+
+.categories {
+  display: inline-block;
+}
+
+.categories > div {
+  display: inline-block;
+  cursor: pointer;
+}
+
+.forms:before {
+  content: "|";
+  margin-right: 10px;
+  margin-left: 10px;
+  text-decoration: none;
+}
+
+.categories > div.selected {
+  text-decoration: underline;
+}
+
+.editorContainer {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 10000;
+
+  pointer-events: none;
+}
+
+.editorContainer ::ng-deep * {
+  pointer-events: auto;
+}

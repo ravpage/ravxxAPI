@@ -14,17 +14,13 @@ import {EditorComponent} from './editor/editor.component';
 import {UserPagesComponent} from "./pages/user-pages/user-pages.component";
 import {UserEntityComponent} from "./common/user-entity/user-entity.component";
 import {PreviewComponent} from './preview/preview.component';
+import { SystemEntitiesComponent}from "./common/system-entities/system-entities.component";
+import {UserEntitiesComponent} from "./common/user-entities/user-entities.component";
+import { SystemFormsComponent } from './common/forms/system-forms/system-forms.component';
+import { UserFormsComponent } from './common/forms/user-forms/user-forms.component';
+import { FormsComponent } from './common/forms/forms/forms.component';
 
 const appRoutes: Routes = [
-    /*
-    { path: 'crisis-center', component: CrisisListComponent },
-    { path: 'hero/:id',      component: HeroDetailComponent },
-    {
-        path: 'heroes',
-        component: HeroListComponent,
-        data: { title: 'Heroes List' }
-    },
-    */
     {
         path: 'pages',
         redirectTo: '/pages/templates',
@@ -40,6 +36,21 @@ const appRoutes: Routes = [
         ]
     },
     {path: 'pages/:type/:id/:action', component: AppMenuBodyComponent, data: {menuState: "pages"}},
+    {
+        path: 'forms',
+        redirectTo: '/forms/templates',
+        pathMatch: 'full'
+    },
+    {
+        path: 'forms/:type',
+        component: AppMenuBodyComponent,
+        data: {menuState: "forms"},
+        children: [
+            {path: ':id/preview', component: PreviewComponent, data: {"class": "forms"}},
+            {path: ':id/:action', component: EditorComponent, data: {"class": "forms"}},
+        ]
+    },
+    {path: 'forms/:type/:id/:action', component: AppMenuBodyComponent, data: {menuState: "forms"}},
     {path: 'forms', component: AppMenuBodyComponent, data: {menuState: "forms"}},
     {path: 'mail_templates', component: AppMenuBodyComponent, data: {menuState: "mail_templates"}},
     {path: 'general', component: AppMenuBodyComponent, data: {menuState: "general"}},
@@ -58,7 +69,12 @@ const appRoutes: Routes = [
         EditorComponent,
         UserPagesComponent,
         UserEntityComponent,
-        PreviewComponent
+        PreviewComponent,
+        SystemEntitiesComponent,
+        UserEntitiesComponent,
+        SystemFormsComponent,
+        UserFormsComponent,
+        FormsComponent
     ],
     imports: [
         BrowserModule,

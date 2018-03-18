@@ -1,7 +1,7 @@
 <div class="entity">
     <div class="menu">
-        <div class="preview" [routerLink]="['/pages/','user_pages',pageTemplate.id,'preview']">preview</div>
-        <div class="create_new" [routerLink]="['/pages/','user_pages',pageTemplate.id,'edit']">edit</div>
+        <div class="preview" [routerLink]="['/'+type+'s/','user_pages',pageTemplate.id,'preview']">preview</div>
+        <div class="create_new" [routerLink]="['/'+type+'s/','user_pages',pageTemplate.id,'edit']">edit</div>
     </div>
     <div class="thumbnail"><img [src]="pageTemplate.thumbnail"></div>
     <div class="name"><input #box value="{{pageTemplate.name}}"

@@ -6,6 +6,7 @@ import {Component, OnInit, Input} from '@angular/core';
     styleUrls: ['./system-entity.component.scss']
 })
 export class SystemEntityComponent implements OnInit {
+    @Input() type:String;
     @Input() pageTemplate: Object;
 
     constructor() {

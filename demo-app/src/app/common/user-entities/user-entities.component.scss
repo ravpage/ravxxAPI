@@ -2,7 +2,7 @@
   display: block;
 }
 
-.systemEntities {
+.userEntities {
   display: -ms-flexbox;
   display: -webkit-flex;
   display: flex;
@@ -23,7 +23,7 @@
   align-items: flex-start;
 }
 
-.systemEntities > * {
+.userEntities > * {
   -webkit-order: 0;
   -ms-flex-order: 0;
   order: 0;

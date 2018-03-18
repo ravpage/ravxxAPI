@@ -1,0 +1,18 @@
+<div class="title">
+  forms
+</div>
+<div class="categories">
+  <div class="templates" [class.selected]="selection=='templates'" routerLink="/forms/templates">Templates</div>
+  <div class="forms" [class.selected]="selection=='user_forms'" routerLink="/forms/user_forms">User form</div>
+</div>
+<ng-container *ngIf="selection=='templates'">
+  <app-system-forms></app-system-forms>
+</ng-container>
+<ng-container *ngIf="selection=='user_forms'">
+  <app-user-forms></app-user-forms>
+  <!--<app-system-entities2></app-system-entities2>-->
+</ng-container>
+<div class="editorContainer">
+  <router-outlet></router-outlet>
+</div>
+

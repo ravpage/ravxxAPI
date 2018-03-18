@@ -7,6 +7,7 @@ import {RavxxApiService} from "../../services/ravxx-api.service";
     styleUrls: ['./user-entity.component.scss']
 })
 export class UserEntityComponent implements OnInit {
+    @Input() type:String;
     @Input() pageTemplate: Object;
     @HostBinding('class.changingName') changingName: boolean = false;
 
@@ -19,7 +20,8 @@ export class UserEntityComponent implements OnInit {
     updateName(newName: String): void {
         var self = this;
         this.changingName = true;
-        this.ravxxApiService.changeUserPageName(this.pageTemplate["id"], newName).then(function () {
+
+        this.ravxxApiService.changeUserEntityName(this.pageTemplate["id"], newName).then(function () {
                 self.pageTemplate["name"] = newName;
                 self.changingName = false;
             }
