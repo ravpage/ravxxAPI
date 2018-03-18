@@ -1,0 +1,26 @@
+:host,
+.loading,
+.editorContainer,
+.editorContainer ::ng-deep iframe {
+  width:100%;
+  height:100%;
+  display:block;
+}
+
+.editorContainer,
+.loading {
+  position:absolute;
+  left:0;
+  top:0;
+}
+
+.loading {
+  z-index:1;
+  background-color:rgba(255,255,255,.5);
+  font-family:arial;
+  font-size:40px;
+}
+
+.editorContainer {
+  z-index:2;
+}

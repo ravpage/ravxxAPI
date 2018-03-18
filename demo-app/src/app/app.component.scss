@@ -1,0 +1,44 @@
+.header {
+  height:20px;
+  font-family:arial;
+  background-color:rgb(100,100,100);
+  color:white;
+
+  padding: 10px;
+  font-size: 19px;
+}
+
+span.user:before {
+  content: " -- ";
+  cursor:default;
+}
+
+.menu {
+  height:20px;
+  font-family:arial;
+  background-color:rgb(150,150,150);
+  color:white;
+
+  padding: 8px;
+  padding-left: 10px;
+  font-size: 15px;
+
+  cursor:pointer;
+}
+
+.menu > span:not(:first-child):before {
+  content:"|";
+  margin-right:5px;
+  pointer-events:none;
+}
+
+.menuBody .title {
+  font-size:20px;
+  font-family:arial;
+  font-weight:bold;
+  color:black;
+}
+
+.menuBody {
+  padding:10px;
+}

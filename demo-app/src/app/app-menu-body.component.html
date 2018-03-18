@@ -1,0 +1,20 @@
+<div class="menuBody" [ngSwitch]="menuState">
+  <div class="general" *ngSwitchCase="'general'">
+    <div class="title">
+      general
+    </div>
+  </div>
+  <div class="pages" *ngSwitchCase="'pages'">
+    <app-pages></app-pages>
+  </div>
+  <div class="forms" *ngSwitchCase="'forms'">
+    <div class="title">
+      forms
+    </div>
+  </div>
+  <div class="mail_templates" *ngSwitchCase="'mail_templates'">
+    <div class="title">
+      mail templates
+    </div>
+  </div>
+</div>
