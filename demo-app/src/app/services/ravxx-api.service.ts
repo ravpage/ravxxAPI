@@ -18,6 +18,10 @@ interface PreviewInstance {
     id;
 }
 
+interface PublishInstance {
+    id;
+}
+
 @Injectable()
 export class RavxxApiService {
     private __loaded = new BehaviorSubject<boolean>(false);
@@ -95,6 +99,10 @@ export class RavxxApiService {
         window["ravxx_api"].destroyPreviewWidget(instance.id);
     }
 
+    destoryPublishWidget(instance: PublishInstance) {
+        window["ravxx_api"].destroyPublishWidget(instance.id);
+    }
+
 
     createEditorWidget(entityClass, entityType, entityId, action, target: ElementRef, editorCallbacks: EditorCallbacks): EditorInstance {
         var self = this;
@@ -146,6 +154,31 @@ export class RavxxApiService {
         };
     }
 
+    createPublishWidget(entityClass, entityType, entityId, target: ElementRef): PublishInstance {
+        var self = this;
+
+        console.log("params", entityClass, entityType, entityId);
+        switch (entityClass) {
+            case "pages":
+                if (entityType == "templates")
+                    var func = window["ravxx_api"].allocateSystemPagePublishWidget;
+                else
+                    var func = window["ravxx_api"].allocateUserPagePublishWidget;
+                break;
+            case "forms":
+                if (entityType == "templates")
+                    var func = window["ravxx_api"].allocateSystemFormPublishWidget;
+                else
+                    var func = window["ravxx_api"].allocateUserFormPublishWidget;
+                break;
+        }
+
+        return {
+            id: func(entityId, {
+                target: target.nativeElement
+            })
+        };
+    }
 
     changeUserEntityName(pageId: Number, newName: String): Promise<void> {
         var self = this;

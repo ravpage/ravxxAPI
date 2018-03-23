@@ -1,0 +1,69 @@
+:host,
+.loading,
+.publishPopup {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.publishPopupBackground {
+  width:100%;
+  height:100%;
+  background-color: rgba(255, 255, 255, .5);
+}
+
+.publishPopup {
+  display: block !important;
+  width: 80% !important;
+  height: 90% !important;
+  position: absolute !important;
+  left: 10% !important;
+  top: 5% !important;
+}
+
+.publishHeader {
+  width:100%;
+  position:relative;
+  background-color: white;
+  border: 1px solid rgba(0,0,0,.3);
+  box-sizing: border-box;
+  font-size: 25px;
+  padding: 5px;
+  height: 42px;
+}
+
+.publishContainer {
+  width:100%;
+  height:calc(100% - 42px);
+  position:relative;
+  overflow:hidden;
+  background-color:white;
+  border: 1px solid rgba(0,0,0,.3);
+  border-top:none;
+  box-sizing: border-box;
+}
+
+.publishHeader .close {
+  font-size: 20px;
+  position: absolute;
+  right: 9px;
+  top: 8px;
+  cursor:pointer;
+}
+
+.loading {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.loading {
+  z-index: 1;
+  background-color: rgba(255, 255, 255, .5);
+  font-family: arial;
+  font-size: 40px;
+}
+
+.publishContainer {
+  z-index: 2;
+}

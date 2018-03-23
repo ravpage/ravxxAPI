@@ -19,6 +19,7 @@ import {UserEntitiesComponent} from "./common/user-entities/user-entities.compon
 import { SystemFormsComponent } from './common/forms/system-forms/system-forms.component';
 import { UserFormsComponent } from './common/forms/user-forms/user-forms.component';
 import { FormsComponent } from './common/forms/forms/forms.component';
+import {PublishComponent} from "./publish/publish.component";
 
 const appRoutes: Routes = [
     {
@@ -32,6 +33,7 @@ const appRoutes: Routes = [
         data: {menuState: "pages"},
         children: [
             {path: ':id/preview', component: PreviewComponent, data: {"class": "pages"}},
+            {path: ':id/publish', component: PublishComponent, data: {"class": "pages"}},
             {path: ':id/:action', component: EditorComponent, data: {"class": "pages"}},
         ]
     },
@@ -47,6 +49,7 @@ const appRoutes: Routes = [
         data: {menuState: "forms"},
         children: [
             {path: ':id/preview', component: PreviewComponent, data: {"class": "forms"}},
+            {path: ':id/publish', component: PublishComponent, data: {"class": "forms"}},
             {path: ':id/:action', component: EditorComponent, data: {"class": "forms"}},
         ]
     },
@@ -74,7 +77,8 @@ const appRoutes: Routes = [
         UserEntitiesComponent,
         SystemFormsComponent,
         UserFormsComponent,
-        FormsComponent
+        FormsComponent,
+        PublishComponent
     ],
     imports: [
         BrowserModule,
